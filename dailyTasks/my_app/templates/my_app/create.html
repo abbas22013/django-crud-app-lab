@@ -1,0 +1,10 @@
+<!-- my_app/templates/my_app/create.html -->
+<h1>Create New Task</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title">
+    <label for="description">Description</label>
+    <textarea name="description" id="description"></textarea>
+    <button type="submit">Create Task</button>
+</form>

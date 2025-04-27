@@ -1,0 +1,7 @@
+<!-- my_app/templates/my_app/detail.html -->
+<h1>{{ task.title }}</h1>
+<p>{{ task.description }}</p>
+<p>Task Status: {% if task.completed %} Completed {% else %} Not Completed {% endif %}</p>
+<a href="{% url 'task_edit' task.id %}">Edit</a> |
+<a href="{% url 'task_delete' task.id %}">Delete</a>
+<a href="{% url 'task_list' %}">Back to Task List</a>
